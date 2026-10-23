@@ -1,6 +1,6 @@
 import { Redirect } from "expo-router";
 import { useState } from "react";
-import { Pressable, Text, View } from "react-native";
+import { Image, Pressable, Text, View } from "react-native";
 import { Button, ErrorBox, Field, Notice } from "@/components/ui";
 import { useAuth } from "@/lib/auth";
 import { supabase } from "@/lib/supabase";
@@ -39,11 +39,19 @@ export default function Login() {
   };
 
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: colors.nav }}>
-      <View style={{ width: "100%", maxWidth: 380, backgroundColor: "#fff", borderRadius: 10, padding: 28, gap: 16 }}>
-        <View style={{ gap: 4 }}>
-          <Text style={{ fontSize: 22, fontWeight: "700", color: colors.text }}>Sales CRM</Text>
-          <Text style={{ color: colors.textSecondary }}>Sign in to your pipeline</Text>
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: colors.ink, borderTopWidth: 6, borderTopColor: colors.primary }}>
+      <View style={{ width: "100%", maxWidth: 400, backgroundColor: "#fff", borderRadius: 10, padding: 28, gap: 16 }}>
+        <View style={{ gap: 14, alignItems: "center" }}>
+          <Image
+            source={require("../../assets/brand/williams-logo.png")}
+            style={{ width: 300, height: 66, maxWidth: "100%" }}
+            resizeMode="contain"
+            accessibilityLabel="Williams Patent Crusher and Pulverizer Co."
+          />
+          <View style={{ alignItems: "center", gap: 2 }}>
+            <Text style={{ fontSize: 20, fontWeight: "700", color: colors.text }}>Sales CRM</Text>
+            <Text style={{ color: colors.textSecondary }}>Sign in to your pipeline</Text>
+          </View>
         </View>
         <ErrorBox message={error} />
         {info ? <Notice tone="good">{info}</Notice> : null}

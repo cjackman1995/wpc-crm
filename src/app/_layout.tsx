@@ -9,7 +9,7 @@ export default function RootLayout() {
   return (
     <View style={{ flex: 1, backgroundColor: colors.bg, fontFamily: font.family } as object}>
       <Head>
-        <title>Sales CRM</title>
+        <title>Williams Sales CRM</title>
       </Head>
       {isConfigured ? (
         <AuthProvider>

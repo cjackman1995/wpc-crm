@@ -1,6 +1,6 @@
 import { router } from "expo-router";
 import { useState } from "react";
-import { Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import { Button, ErrorBox, Field, Loading } from "@/components/ui";
 import { changePassword } from "@/lib/api";
 import { useAuth } from "@/lib/auth";
@@ -30,7 +30,7 @@ export default function ResetPassword() {
   };
 
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: colors.nav }}>
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: colors.ink, borderTopWidth: 6, borderTopColor: colors.primary }}>
       <View style={{ width: "100%", maxWidth: 380, backgroundColor: "#fff", borderRadius: 10, padding: 28, gap: 16 }}>
         <Text style={{ fontSize: 20, fontWeight: "700", color: colors.text }}>Set your password</Text>
         {loading ? (
