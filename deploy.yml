@@ -1,0 +1,16 @@
+# EAS Workflow: every push to main builds the web app and deploys it to production on EAS Hosting.
+# Requires the GitHub repo to be connected to the Expo project (expo.dev -> project -> GitHub)
+# and EXPO_PUBLIC_SUPABASE_URL / EXPO_PUBLIC_SUPABASE_ANON_KEY set for the "production" environment.
+name: Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    type: deploy
+    name: Deploy web to production
+    environment: production
+    params:
+      prod: true
