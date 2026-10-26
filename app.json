@@ -29,6 +29,16 @@
     "scheme": "salescrm",
     "experiments": {
       "typedRoutes": false
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "847af3ed-bbb9-426c-bdb4-f968f34cff6b"
+      }
     }
   }
 }
